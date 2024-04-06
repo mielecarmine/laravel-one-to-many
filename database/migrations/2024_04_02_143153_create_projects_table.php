@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name', 30);
             $table->text('description');
             $table->string('link', 2048);
-            $table->boolean('done')->default(0);
             $table->timestamps();
         });
     }

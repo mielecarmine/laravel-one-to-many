@@ -19,6 +19,7 @@
             <tr>
                 <td>{{ $project->name }}</td>
                 {{-- <td>{{ $project->type }}</td> --}}
+                
             </tr> 
           @endforeach
         </tbody>
