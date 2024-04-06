@@ -10,4 +10,8 @@ class Project extends Model
     use HasFactory;
 
     // protected $fillable = ['name', ]
+
+    public function typeDetail() {
+        return $this->belongsTo(Type::class);
+    }
 }

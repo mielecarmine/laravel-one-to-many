@@ -22,6 +22,7 @@ class ProjectSeeder extends Seeder
             $project->description = $faker->paragraph(8);
             $project->link = $faker->url();
             $project->done = $faker->boolean();
+            $project->types_id = $faker->numberBetween(1,3);
             $project->save();
         }
     }
