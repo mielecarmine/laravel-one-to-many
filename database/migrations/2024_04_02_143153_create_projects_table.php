@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 30);
             $table->text('description');
-            $table->string('link', 2048);
+            $table->string('link', 2048)->nullable();
             $table->timestamps();
         });
     }
