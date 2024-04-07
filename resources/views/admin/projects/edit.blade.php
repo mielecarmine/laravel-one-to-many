@@ -12,17 +12,17 @@
           @method('PUT')
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name"
-              value="{{ $project->name }}" required>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
+            value="{{ $project->name }}" required>
           </div>
           <div class="form-group">
             <label for="description">Descrizione</label>
-            <textarea class="form-control" id="description" name="description" rows="3" required>{{ $project->description }}</textarea>
+            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="3" required>{{ $project->description }}</textarea>
           </div>
 
           <div class="form-group">
             <label for="link">Link</label>
-            <input type="url" class="form-control" id="link" name="link"
+            <input type="url" class="form-control @error('link') is-invalid @enderror" id="link" name="link"
               value="{{ $project->link }}" required>
           </div>
 
@@ -40,3 +40,14 @@
     </div>
   </div>
 @endsection
+
+@if ($errors->any())
+<div class="alert alert-danger">
+  <h4>Correggi i seguenti errori per proseguire: </h4>
+  <ul>
+    @foreach ($errors->all() as $error)
+      <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</div>
+@endif
