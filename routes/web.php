@@ -32,7 +32,7 @@ Route::middleware('auth')
       ->name('dashboard');
 
     Route::resource('projects', ProjectController::class);
-    // Route::resource('types', TypeController::class);
+    Route::resource('types', TypeController::class);
 
   });
 

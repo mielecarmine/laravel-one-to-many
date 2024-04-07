@@ -17,8 +17,9 @@
               </div>
             @endif
 
-            {{ __('You are logged in!') }}
-            <a href="{{ route('admin.projects.index') }}">Visualizza i progetti</a>
+            {{ __('You are logged in!') }} <br>
+            <a href="{{ route('admin.projects.index') }}">Visualizza i progetti</a> <br>
+            <a href="{{ route('admin.types.index') }}">Visualizza i tipi disponibili</a>
           </div>
         </div>
       </div>

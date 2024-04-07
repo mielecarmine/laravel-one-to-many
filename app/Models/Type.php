@@ -15,6 +15,6 @@ class Type extends Model
 
     public function getBadge()
     {
-        return "<span class='badge' style='background-color: {$this->color}'>{$this->label}</span>";
+        return "<span class='badge' style='background-color: {$this->colour}'>{$this->label}</span>";
     }
 }
