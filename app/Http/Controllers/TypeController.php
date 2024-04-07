@@ -40,7 +40,7 @@ class TypeController extends Controller
         $type = new Type;
         $type->fill($data);
         $type->save();
-        return redirect()->route('admin.types.show');
+        return redirect()->route('admin.types.show', compact('type'));
     }
 
     /**
@@ -88,6 +88,6 @@ class TypeController extends Controller
     public function destroy(Type $type)
     {
         $type->delete();
-        return redirect()->route('admin.type.index');
+        return redirect()->route('admin.types.index');
     }
 }
